@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature motif: the school exercise-book margin rule.
+   A muted red vertical margin line with faint horizontal blue
+   ruled lines behind it — borrowed from the ruled notebooks every
+   student here actually writes in. Used as a recurring structural
+   device across section dividers and the hero. */
+.copybook {
+  position: relative;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 34px,
+    rgba(79, 168, 216, 0.16) 35px
+  );
+}
+
+.copybook::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2.25rem;
+  width: 2px;
+  background: rgba(193, 68, 60, 0.45);
+}
+
+@media (max-width: 640px) {
+  .copybook::before {
+    left: 1.1rem;
+  }
+}
+
+.copybook-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.copybook-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    #c1443c 0,
+    #c1443c 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  opacity: 0.55;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #1d4e89;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.bn {
+  font-family: 'Noto Sans Bengali', sans-serif;
+}

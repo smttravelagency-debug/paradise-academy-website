@@ -1,0 +1,16 @@
+{
+  "name": "The Paradise Academy",
+  "short_name": "Paradise Academy",
+  "description": "Bengali & English medium school, Rasikpur, Murutia, Nadia, West Bengal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFBFD",
+  "theme_color": "#1D4E89",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
